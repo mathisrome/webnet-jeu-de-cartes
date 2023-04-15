@@ -1,0 +1,69 @@
+@import "~bootstrap";
+
+header {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+		url("../images/jeu-de-cartes.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	color: white;
+	text-align: center;
+	row-gap: 16px;
+	padding: 16px;
+}
+
+header h1 {
+	text-transform: uppercase;
+}
+
+header a,
+header button[type="submit"].btn {
+	display: block;
+	text-decoration: none;
+	background-color: black;
+	border: 1px solid white;
+	border-radius: 16px;
+	width: fit-content;
+	margin: 0 auto;
+	padding: 8px 16px;
+	color: white;
+	transition: 0.3s all;
+}
+
+header a:hover,
+header button[type="submit"].btn:hover {
+	background-color: white;
+	border: 1px solid black;
+	color: black;
+}
+
+header label,
+header legend {
+	text-align: left;
+	display: block;
+}
+
+header form {
+	max-width: 60%;
+	margin: 0 auto;
+}
+
+header ul {
+	padding-left: 0;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+@media screen and (max-width: 991px) {
+	header form {
+		max-width: 100%;
+	}
+}

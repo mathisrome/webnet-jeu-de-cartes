@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Hello GameController!
+{% endblock %}
+
+{% block body %}
+	<header>
+		<h1>Choisissez le nombre de carte</h1>
+		<div class="container p-0">
+			{{form_start(gameForm)}}
+			{{form_errors(gameForm)}}
+			{{form_row(gameForm.nbCards)}}
+
+			{{form_row(gameForm.colors)}}
+
+
+			{{form_row(gameForm.valeurs)}}
+
+			{{form_row(gameForm.submit)}}
+
+			{{form_end(gameForm)}}
+		</div>
+
+
+	</header>
+
+
+{% endblock %}

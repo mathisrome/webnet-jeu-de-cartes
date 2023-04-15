@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GameController!
+{% endblock %}
+
+{% block body %}
+	<header>
+		<h1>Votre main désordonnée</h1>
+		<ul>
+			{% for card in game.hand.cards %}
+				<li>
+					<img src="{{asset('build/cartes-gif/'~ card.image)}}" alt="" class="img-fluid">
+				</li>
+			{% endfor %}
+		</ul>
+
+
+		<a href="{{path('app_game_show_ordered_hand', {'id': game.id})}}">Voir la main ordonnée</a>
+
+	</header>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GameController!
+{% endblock %}
+
+{% block body %}
+
+	<header>
+		<h1>Votre main ordonnée</h1>
+		<ul>
+			{% for card in cards %}
+				<li>
+					<img src="{{asset('build/cartes-gif/'~ card.image)}}" alt="" class="img-fluid">
+				</li>
+			{% endfor %}
+		</ul>
+
+		<a href="{{path('app_game')}}">Retournez à l'accueil</a>
+	</header>
+
+{% endblock %}
